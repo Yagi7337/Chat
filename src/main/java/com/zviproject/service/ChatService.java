@@ -65,5 +65,9 @@ public class ChatService {
 	public Collection<Message> getFullInformation(int sender, int reciver, DetachedCriteria dc) {
 		return iChat.getFullInformation(sender, reciver, dc);
 	}
+	
+	public void updateTextOfMessageById(int sender_id, int message_id, Message message){
+		iChat.updateTextOfMessageById(sender_id, message_id, message);
+	}
 
 }

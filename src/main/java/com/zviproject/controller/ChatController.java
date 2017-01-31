@@ -100,6 +100,12 @@ public class ChatController {
 		DetachedCriteria dc = createDetachedCriteria(sender, reciver);
 		return chatService.getFullInformation(sender, reciver, dc);
 	}
-
+	
+	@RequestMapping(value = "/{sender_id}/{message_id}/update_message", method = RequestMethod.PUT)
+	public void updateTextOfMessageById(@PathVariable("sender_id") int sender_id, 
+			@PathVariable("message_id") int message_id, 
+			@RequestBody Message message) {
+		chatService.updateTextOfMessageById(sender_id, message_id, message);
+	}
 
 }

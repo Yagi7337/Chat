@@ -46,5 +46,15 @@ public interface IChat {
 	 */
 	public int registerUser(User user);
 
+	/**
+	 * Update text of message by in DB
+	 * 
+	 * @param id
+	 * @param message_id
+	 * @param message - object of class Message
+	 * @return 
+	 */
+	public void updateTextOfMessageById(int sender_id, int message_id, Message message);	
+	
 }
 
